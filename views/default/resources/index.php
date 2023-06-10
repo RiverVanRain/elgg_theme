@@ -11,16 +11,15 @@ if (elgg_is_logged_in() && $activity_enable) {
 } else if (elgg_is_logged_in() && !$activity_enable) {
 	$title = elgg_echo('welcome:user', [$user->getDisplayName()]);
 	
-	echo elgg_view_page(null, [
+	echo elgg_view_page('', [
 		'title' => $title,
 		'content' => elgg_echo('index:content'),
-		'sidebar' => false,
-		'filter' => false,
+		'filter_id' => 'index',
 	]);
 }  else {
 	elgg_push_context('elgg_theme');
 	$class = ['class' => 'elgg-landing-page'];
 
 	$body = elgg_view_layout('front_page');
-	echo elgg_view_page(null, $body, 'default', ['body_attrs' => $class]);
+	echo elgg_view_page('', $body, 'default', ['body_attrs' => $class]);
 }

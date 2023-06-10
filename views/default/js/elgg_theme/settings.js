@@ -1,7 +1,6 @@
-define(['jquery', 'elgg'], function ($, elgg) {
-	elgg.provide('elgg.settings');
+define(['jquery'], function ($) {
 	
-	elgg.settings.landing_action = function(elem) {
+	landing_action = function(elem) {
 		if ($(elem).is(':checked')) {
 			$('#settings-landing-action').show();
 		} else {
@@ -9,7 +8,7 @@ define(['jquery', 'elgg'], function ($, elgg) {
 		}
 	};
 	
-	elgg.settings.display_members = function(elem) {
+	display_members = function(elem) {
 		if ($(elem).is(':checked')) {
 			$('#settings-display-members').show();
 		} else {
@@ -17,7 +16,7 @@ define(['jquery', 'elgg'], function ($, elgg) {
 		}
 	};
 	
-	elgg.settings.display_groups = function(elem) {
+	display_groups = function(elem) {
 		if ($(elem).is(':checked')) {
 			$('#settings-display-groups').show();
 		} else {
@@ -25,7 +24,7 @@ define(['jquery', 'elgg'], function ($, elgg) {
 		}
 	};
 	
-	elgg.settings.activity_sidebar = function(elem) {
+	activity_sidebar = function(elem) {
 		if ($(elem).is(':checked')) {
 			$('#settings-activity-sidebar').show();
 		} else {

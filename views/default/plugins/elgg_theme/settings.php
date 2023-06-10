@@ -40,7 +40,7 @@ echo elgg_view_field([
 	'name' => 'params[landing_action]',
 	'checked' => (bool) $entity->landing_action,
 	'switch' => true,
-	'onchange' => 'elgg.settings.landing_action(this);',
+	'onchange' => 'landing_action(this);',
 ]);
 
 echo elgg_view_field([
@@ -82,7 +82,7 @@ echo elgg_view_field([
 	'name' => 'params[display_members]',
 	'checked' => (bool) $entity->display_members,
 	'switch' => true,
-	'onchange' => 'elgg.settings.display_members(this);',
+	'onchange' => 'display_members(this);',
 ]);
 
 echo elgg_view_field([
@@ -106,7 +106,7 @@ echo elgg_view_field([
 	'name' => 'params[display_groups]',
 	'checked' => (bool) $entity->display_groups,
 	'switch' => true,
-	'onchange' => 'elgg.settings.display_groups(this);',
+	'onchange' => 'display_groups(this);',
 ]);
 
 echo elgg_view_field([
@@ -134,7 +134,7 @@ echo elgg_view_field([
 			'name' => 'params[activity_sidebar]',
 			'checked' => (bool) $entity->activity_sidebar,
 			'switch' => true,
-			'onchange' => 'elgg.settings.activity_sidebar(this);',
+			'onchange' => 'activity_sidebar(this);',
 		],
 	],
 ]);

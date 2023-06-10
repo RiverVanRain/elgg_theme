@@ -4,6 +4,10 @@ $entity = elgg_get_plugin_from_id('elgg_theme');
 
 echo elgg_view('elgg_theme/elements/featured');
 
+$action_content = '';
+$members_content = '';
+$groups_content = '';
+
 // call to action section
 if ((bool) $entity->landing_action) {
 	$header = '';
@@ -46,6 +50,7 @@ if ((bool) $entity->display_members) {
 	]);
 	
 	$header = '';
+	$items = '';
 	
 	if (!empty($entity->members_h1)) {
 		$h1 = elgg_format_element('h1', [], $entity->members_h1);
@@ -96,6 +101,7 @@ if (elgg_is_active_plugin('groups') && (bool) $entity->display_groups) {
 	]);
 	
 	$header = '';
+	$group_items = '';
 	
 	if (!empty($entity->groups_h1)) {
 		$h1 = elgg_format_element('h1', [], elgg_view('output/url', [

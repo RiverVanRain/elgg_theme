@@ -5,7 +5,7 @@ if ((bool) elgg_get_plugin_setting('walled_garden', 'elgg_theme')) {
 	$class = ['class' => 'elgg-landing-page'];
 
 	$body = elgg_view_layout('front_page');
-	echo elgg_view_page(null, $body, 'default', ['body_attrs' => $class]);
+	echo elgg_view_page('', $body, 'default', ['body_attrs' => $class]);
 } else {
 	echo elgg_view_page('', [
 		'content' => elgg_view('core/account/login_box', ['title' => false]),
