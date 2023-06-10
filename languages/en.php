@@ -24,5 +24,12 @@ return [
 	'elgg_theme:settings:activity_sidebar:profile_icon' => 'Show profile icon',
 	'elgg_theme:settings:activity_sidebar:friends' => 'Show friends',
 	
+	'admin:elgg_theme' => 'Elgg Landing Theme',
+	'admin:elgg_theme:cover' => 'Cover image',
+	'elgg_theme:settings:cover' => 'Cover image (PNG format)',
+	'elgg_theme:settings:cover:help' => 'Recommend an image with minimal width 2100px.',
+	'elgg_theme:settings:cover:success' => 'Cover image has been saved.',
+	'elgg_theme:settings:cover:invalid' => 'No cover image found.',
+	
 	'index:content' => '<p>Many sites use <a href="https://es.wzm.me">the additional plugins</a> for this theme to place the custom modules on this landing page.</p><p>Contact with our developers to make beautiful and modern design for your site: <a href="mailto:lab@wzm.me">lab@wzm.me</a></p>',
 ];

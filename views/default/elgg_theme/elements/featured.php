@@ -3,10 +3,16 @@
 $entity = elgg_get_plugin_from_id('elgg_theme');
 
 // Get the image
-$img = elgg_get_simplecache_url('graphics/cover.jpg');
+$file_src = elgg_get_data_path() . 'elgg_theme/cover.png';
+
+if (file_exists($file_src)) {
+	$img = elgg_get_simplecache_url('elgg_theme/cover.png');
+} else {
+	$img = elgg_get_simplecache_url('graphics/cover.jpg');
+}
 
 $cover = elgg_format_element('div', [
-	'class' => 'slide',
+	'class' => 'elgg-featured-cover',
 	'style' => "background-image: url('{$img}');"
 ]);
 

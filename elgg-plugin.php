@@ -23,15 +23,44 @@ return [
 		],
 		'activate_on_install' => true,
 	],
+
+	'actions' => [
+		//admin
+		'admin/elgg_theme/cover' => [
+			'controller' => \wZm\ElggTheme\Actions\SettingsAction::class,
+			'access' => 'admin',
+		],
+	],
+	
+	'events' => [
+		'register' => [
+			'menu:page' => [
+				\wZm\ElggTheme\Menus\SettingsManu::class => [],
+			],
+		],
+	],
 	
 	'view_extensions' => [
-        'elgg.css' => [
+        'admin.css' => [
+            'elgg_theme/elgg_theme_admin.css' => [],
+        ],
+		'elgg.css' => [
             'elgg_theme/elgg_theme.css' => [],
         ],
 		'river/sidebar' => [
             'elgg_theme/sidebar' => [],
         ],
     ],
+	
+	'view_options' => [
+		'graphics/cover.jpg' => ['simplecache' => true],
+	],
+	
+	'views' => [
+		'default' => [
+			'elgg_theme/' => elgg_get_data_path() . 'elgg_theme/',
+		],
+	],
 
 	'settings' => [
 		'landing_action' => true,

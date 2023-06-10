@@ -9,10 +9,10 @@ legend {
 }
 .elgg-landing-page {
 	.elgg-page-body {
-		padding: 0;
+		padding: 0 !important;
 		
 		> .elgg-inner {
-			padding: 0;
+			padding: 0 !important;
 			max-width: none;
 		}
 	}
@@ -80,12 +80,14 @@ legend {
 	height: 32.5rem;
 	transition: all 0.3s;
 	
-	.slide {
+	.elgg-featured-cover {
 		background-repeat: no-repeat; 
 		background-position: center center;
 		background-size: cover;
 		height: 32.5rem;
 		transition: all 0.3s;
+		background-color: rgba(0,0,0,.4);
+		background-blend-mode: multiply;
 	}
 	
 	.elgg-caption {
@@ -148,7 +150,7 @@ legend {
 	.elgg-featured-container {
 		height: 21rem;
 		
-		.slide {
+		.elgg-featured-cover {
 			height: 21rem;
 		}
 		
@@ -177,7 +179,7 @@ legend {
 	.elgg-featured-container {
 		height: 15rem;
 		
-		.slide {
+		.elgg-featured-cover {
 			height: 15rem;
 		}
 		
@@ -218,3 +220,4 @@ legend {
 		}
 	}
 }
+
