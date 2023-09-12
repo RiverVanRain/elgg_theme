@@ -25,11 +25,20 @@ return [
 	'elgg_theme:settings:activity_sidebar:friends' => 'Show friends',
 	
 	'admin:elgg_theme' => 'Elgg Landing Theme',
+	'admin:elgg_theme:config' => 'Settings',
+	
 	'admin:elgg_theme:cover' => 'Cover image',
 	'elgg_theme:settings:cover' => 'Cover image (PNG format)',
 	'elgg_theme:settings:cover:help' => 'Recommend an image with minimal width 2100px.',
 	'elgg_theme:settings:cover:success' => 'Cover image has been saved.',
 	'elgg_theme:settings:cover:invalid' => 'No cover image found.',
+	
+	'elgg_theme:settings:topbar_logo_text' => 'Show only site name on the topbar instead of logo image',
+	'admin:elgg_theme:logo' => 'Logo image',
+	'elgg_theme:settings:logo' => 'Logo image (PNG format)',
+	'elgg_theme:settings:logo:help' => "Disable 'Show only site name' option via Elgg Landing Theme settings to display logo image on the topbar. Recommend an image with maximum width 40px.",
+	'elgg_theme:settings:logo:success' => 'Logo image has been saved.',
+	'elgg_theme:settings:logo:invalid' => 'No logo image found.',
 	
 	'index:content' => '<p>Many sites use <a href="https://es.wzm.me">the additional plugins</a> for this theme to place the custom modules on this landing page.</p><p>Contact with our developers to make beautiful and modern design for your site: <a href="mailto:lab@wzm.me">lab@wzm.me</a></p>',
 ];

@@ -4,10 +4,10 @@ namespace wZm\ElggTheme\Actions;
 
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
-class SettingsAction {
+class LogoAction {
 
 	public function __invoke(\Elgg\Request $request) {
-		$asset = 'cover';
+		$asset = 'logo';
 		$upload = elgg_get_uploaded_file($asset);
 		
 		if (!$upload instanceof UploadedFile || !$upload->isValid()) {

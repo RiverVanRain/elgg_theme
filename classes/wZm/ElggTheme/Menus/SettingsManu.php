@@ -16,11 +16,27 @@ class SettingsManu {
 		
 		$menu = $event->getValue();
 		/* @var $menu \Elgg\Collections\Collection */
+		
+		$menu->add(\ElggMenuItem::factory([
+			'name' => 'elgg_theme:config',
+			'text' => elgg_echo('admin:elgg_theme:config'),
+			'href' => elgg_normalize_url('admin/plugin_settings/elgg_theme'),
+			'parent_name' => 'plugin:settings:elgg_theme',
+			'section' => 'plugin_settings',
+		]));
 
 		$menu->add(\ElggMenuItem::factory([
 			'name' => 'elgg_theme:cover',
 			'text' => elgg_echo('admin:elgg_theme:cover'),
 			'href' => elgg_normalize_url('admin/elgg_theme/cover'),
+			'parent_name' => 'plugin:settings:elgg_theme',
+			'section' => 'plugin_settings',
+		]));
+		
+		$menu->add(\ElggMenuItem::factory([
+			'name' => 'elgg_theme:logo',
+			'text' => elgg_echo('admin:elgg_theme:logo'),
+			'href' => elgg_normalize_url('admin/elgg_theme/logo'),
 			'parent_name' => 'plugin:settings:elgg_theme',
 			'section' => 'plugin_settings',
 		]));

@@ -13,6 +13,15 @@ echo elgg_view_field([
 	'switch' => true,
 ]);
 
+// logo
+echo elgg_view_field([
+	'#type' => 'checkbox',
+	'#label' => elgg_echo('elgg_theme:settings:topbar_logo_text'),
+	'name' => 'params[topbar_logo_text]',
+	'checked' => (bool) $entity->topbar_logo_text,
+	'switch' => true,
+]);
+
 //landing page
 echo elgg_view_field([
 	'#type' => 'fieldset',

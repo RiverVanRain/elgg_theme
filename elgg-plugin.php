@@ -10,7 +10,7 @@
 return [
 	'plugin' => [
 		'name' => 'Elgg Landing Theme',
-		'version' => '2.0.0',
+		'version' => '2.1.0',
 		'dependencies' => [
 			'activity' => [
 				'position' => 'after',
@@ -25,9 +25,13 @@ return [
 	],
 
 	'actions' => [
-		//admin
 		'admin/elgg_theme/cover' => [
-			'controller' => \wZm\ElggTheme\Actions\SettingsAction::class,
+			'controller' => \wZm\ElggTheme\Actions\CoverAction::class,
+			'access' => 'admin',
+		],
+		
+		'admin/elgg_theme/logo' => [
+			'controller' => \wZm\ElggTheme\Actions\LogoAction::class,
 			'access' => 'admin',
 		],
 	],
@@ -63,6 +67,7 @@ return [
 	],
 
 	'settings' => [
+		'topbar_logo_text' => true,
 		'landing_action' => true,
 		'display_members' => true,
 		'display_groups' => false,

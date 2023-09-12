@@ -11,3 +11,4 @@ Based on [Elgg Connect plugin](https://github.com/PerJensen/elgg_connect)
 * Landing page with cover photo, latest users and groups
 * Optional sidebar with content on the activity page
 * New standard icons for groups and users that match the color scheme
+* Logo image on the topbar
