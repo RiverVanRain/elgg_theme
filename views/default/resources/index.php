@@ -1,41 +1,23 @@
 <?php
-/**
- * Elgg Connect front page
- * @package elgg_connect
- * 
- */
 
-if (elgg_is_logged_in()) {
-	forward('activity');
+$activity_enable = elgg_is_active_plugin('activity');
+
+if (elgg_is_logged_in() && $activity_enable) {
+	$exception = new \Elgg\Exceptions\HttpException();
+	$exception->setRedirectUrl(elgg_generate_url('default:river'));
+	throw $exception;
+} else if (elgg_is_logged_in() && !$activity_enable) {
+	$title = elgg_echo('welcome:user', [elgg_get_logged_in_user_entity()->getDisplayName()]);
+	
+	echo elgg_view_page('', [
+		'title' => $title,
+		'content' => elgg_echo('index:content'),
+		'filter_id' => 'index',
+	]);
+}  else {
+	elgg_push_context('elgg_theme');
+	$class = ['class' => 'elgg-landing-page'];
+
+	$body = elgg_view_layout('front_page');
+	echo elgg_view_page('', $body, 'default', ['body_attrs' => $class]);
 }
-
-$list_params = array(
-	'type' => 'user',
-	'metadata_names' => 'icontime', 
-	'full_view' => false,
-	'pagination' => false,
-	'limit' => 10,
-	'offset' => 0,
-);
-$members = elgg_get_entities($list_params);
-
-$options = array(
-	'type' => 'group', 
-	'full_view' => false,
-	'pagination' => false,
-	'limit' => 10,
-	'offset' => 0
-);
-$groups = elgg_get_entities($options);
-
-// lay out the content
-$params = array(
-	'groups' => $groups,
-	'members' => $members
-);
-
-elgg_push_context('elgg_connect');
-$class = array('class' => 'elgg-landing-page');
-
-$body = elgg_view_layout('front_page', $params);
-echo elgg_view_page(null, $body, 'default', array('body_attrs' => $class));

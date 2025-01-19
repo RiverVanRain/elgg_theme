@@ -1,0 +1,223 @@
+legend {
+	font-weight: 500;
+	font-size: 1.2rem;
+	color: $(text-color-strong);
+}
+.elgg-theme-sidebar-profile {
+	display: flex;
+    justify-content: center;
+}
+.elgg-landing-page {
+	.elgg-page-body {
+		padding: 0 !important;
+		
+		> .elgg-inner {
+			padding: 0 !important;
+			max-width: none;
+		}
+	}
+}
+
+.elgg-landing-page-body {
+	font-size: 1.1rem;
+	font-weight: normal;
+	
+	.elgg-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		max-width: 80rem;
+		margin: 0 auto;	
+		padding: 3rem 2rem;
+		text-align: center;	
+
+		h1 a {
+			color: $(text-color-strong);
+			text-decoration: none;
+		}
+	}
+	
+	.elgg-layout-header {
+		border-bottom: none;
+		
+		h1 {
+			text-align: center;
+		}
+	}
+	
+	.elgg-item {
+		img {
+			border-radius: 50%;
+		}
+	}
+	
+	.action {
+		justify-content: center;
+		flex-direction: column;
+		
+		> .elgg-layout-header {
+			margin-bottom: 0;
+		}
+		
+		.elgg-layout-content {
+			font-size: 1.5rem;
+			padding: 1rem 2rem 2rem 2rem;
+		}
+	}
+	
+	> .elgg-layout-content:nth-child(even) {
+		background-color: $(background-color-soft);
+	}
+}
+
+/* 	featured module */
+.elgg-featured-container {
+	position: relative;
+	zoom: 1;		
+	margin: 0;
+	overflow: hidden;
+	background: $(body-background-color);
+	height: 32.5rem;
+	transition: all 0.3s;
+	
+	.elgg-featured-cover {
+		background-repeat: no-repeat; 
+		background-position: center center;
+		background-size: cover;
+		height: 32.5rem;
+		transition: all 0.3s;
+		background-color: rgba(0,0,0,.4);
+		background-blend-mode: multiply;
+	}
+	
+	.elgg-caption {
+		position: absolute; 
+		top: 11.25rem; 
+		width: 100%;
+		padding: 0 2rem;
+		box-sizing: border-box;
+		transition: all 0.3s;
+		
+		h1 {
+			color: $(body-background-color);
+			font-size: 4.0rem;
+			line-height: 1;
+			padding-bottom: 1rem;
+			transition: all 0.3s;
+		}
+		
+		h2 {
+			color: $(body-background-color);
+			font-weight: normal;
+			font-size: 2.4rem;
+			transition: all 0.3s;
+		}
+		
+		.elgg-inner {
+			text-align: center;
+			width: 100%;
+			position: relative;
+		}
+	}
+}
+
+
+@media (max-width: 80rem) {
+	.elgg-landing-page-body {
+		.elgg-item {
+			max-height: 10.375rem;
+		}
+	
+		.elgg-container.groups {
+			.elgg-item {
+				flex: 1 0 51%;
+				max-width: 100%;
+				align-items: center;
+				margin-top: 2rem;
+			}
+			
+			.elgg-layout-header {
+				margin-bottom: 0;
+				h1 {
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 50rem) {
+	.elgg-featured-container {
+		height: 21rem;
+		
+		.elgg-featured-cover {
+			height: 21rem;
+		}
+		
+		.elgg-caption {
+			top: 6rem;
+			
+			h1 {
+				font-size: 3.4rem;
+				padding-bottom: .75rem;
+			}
+			h2 {
+				font-size: 2.0rem;
+			}
+		}
+	}
+	
+	.elgg-landing-page-body {
+		.elgg-container.members .elgg-item {
+			flex: 1 0 26%;
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+@media (max-width: 30rem) {
+	.elgg-featured-container {
+		height: 15rem;
+		
+		.elgg-featured-cover {
+			height: 15rem;
+		}
+		
+		.elgg-caption {
+			top: 5rem;
+			
+			h1 {
+				font-size: 2.4rem;
+				padding-bottom: .5rem;
+			}
+			h2 {
+				font-size: 1.6rem;
+			}
+		}
+	}
+	
+	.elgg-landing-page-body {
+		.action {
+			.elgg-layout-content {
+				font-size: 1.2rem;
+			}
+		}
+
+		.elgg-container {
+			padding: 1rem 1rem 2rem;
+		}
+		
+		.elgg-layout-header h1 {
+			font-size: 1.6rem;
+		}
+		
+		.elgg-container.members .elgg-item {
+			flex: 1 0 41%;
+		}
+		
+		h2 {
+			font-size: 1.2rem;
+		}
+	}
+}
+

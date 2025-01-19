@@ -1,42 +1,44 @@
 <?php
 
-return array(
-
-	// Landing page
-	'elgg_connect:members' 				=> 'Members',
-		
-	// Groups
-	'elgg_connect:icon:info' 			=> 'Use an image with dimensions of 1200 x 500px or larger with the same aspect ratio.',
-	'elgg_connect:icon:info:title' 		=> "Image format",
-			
-	// Settings	
-	'elgg_connect:header:frontpage'		=> 'Front Page:',
-	'elgg_connect:header:sidebar'		=> 'Sidebar:',
+return [
+	'elgg_theme:settings:walled_garden' => 'Enable Landing Page on the <a href="http://learn.elgg.org/en/stable/guides/walled-garden.html#activating-walled-garden-mode">walled garden mode</a>',
 	
-	'elgg_connect:admin:info:title'		=> 'About icons:',
-	'elgg_connect:admin:info'			=> '
+	'elgg_theme:settings:landing' => 'Landing Page config',
+	'elgg_theme:settings:landing:caption_h1' => 'Caption header',
+	'elgg_theme:settings:landing:caption_h2' => 'Caption subheader',
 	
-		<p>When a new group is created, the user will see a message that recommends using a group image of an appropriate size. Recommended size is 1200 x 500px or larger with the same aspect ratio. It fits the new layout on the groups profile page used in this theme.</p>
-		
-		<p>For existing groups, the new icon size will automatically be genereted from the existing image.</p>',
-
-	'elgg_connect:info:index:action'	=> 'Add Call to Action text:',
-	'elgg_connect:info:content' 		=> 'Add Groups text:',
-
-	'elgg_connect:label:action_h1' 		=> 'Call to action header',
-	'elgg_connect:label:action_h2' 		=> 'Call to action subheader',	
-	'elgg_connect:label:caption_h1' 	=> 'Caption header',
-	'elgg_connect:label:caption_h2' 	=> 'Caption subheader',
+	'elgg_theme:settings:landing:action' => 'Enable Call to Action section',
+	'elgg_theme:settings:landing:action:action_h1' => 'Call to action header',
+	'elgg_theme:settings:landing:action:action_h2' => 'Call to action subheader',
+	'elgg_theme:settings:landing:action:button_text' => 'Call to action button text',
+	'elgg_theme:settings:landing:action:button_link' => 'Call to action button link',
 	
-	'elgg_connect:label:enable:action' 	=> 'Show action section (fill in the fields below)',
-	'elgg_connect:label:enable:members' => 'Show members section (fill in the fields below)',
-	'elgg_connect:label:enable:groups' 	=> 'Show groups section (fill in the fields below)',
+	'elgg_theme:settings:landing:display_members' => 'Display members section',
+	'elgg_theme:settings:landing:display_members:members_h1' => 'Members header',
 	
-	'elgg_connect:label:friends'		=> 'Show friends',
-	'elgg_connect:label:groups'			=> 'Groups header',
-	'elgg_connect:label:members'		=> 'Members header',
-	'elgg_connect:label:sidebar'		=> 'Sidebar on activity page:',
-	'elgg_connect:label:sidebar:yes'	=> 'If sidebar, select content below:',
-	'elgg_connect:label:user:icon'		=> 'Show profile icon',
-
-);
+	'elgg_theme:settings:landing:display_groups' => 'Display groups section',
+	'elgg_theme:settings:landing:display_groups:groups_h1' => 'Groups header',
+	
+	'elgg_theme:settings:sidebar' => 'Sidebar config',
+	'elgg_theme:settings:activity_sidebar' => 'Display sidebar on the Activity page',
+	'elgg_theme:settings:activity_sidebar:profile_icon' => 'Show profile icon',
+	'elgg_theme:settings:activity_sidebar:friends' => 'Show friends',
+	
+	'admin:elgg_theme' => 'Elgg Landing Theme',
+	'admin:elgg_theme:config' => 'Settings',
+	
+	'admin:elgg_theme:cover' => 'Cover image',
+	'elgg_theme:settings:cover' => 'Cover image (PNG format)',
+	'elgg_theme:settings:cover:help' => 'Recommend an image with minimal width 2100px.',
+	'elgg_theme:settings:cover:success' => 'Cover image has been saved.',
+	'elgg_theme:settings:cover:invalid' => 'No cover image found.',
+	
+	'elgg_theme:settings:topbar_logo_text' => 'Show only site name on the topbar instead of logo image',
+	'admin:elgg_theme:logo' => 'Logo image',
+	'elgg_theme:settings:logo' => 'Logo image (PNG format)',
+	'elgg_theme:settings:logo:help' => "Disable 'Show only site name' option via Elgg Landing Theme settings to display logo image on the topbar. Recommend an image with maximum width 40px.",
+	'elgg_theme:settings:logo:success' => 'Logo image has been saved.',
+	'elgg_theme:settings:logo:invalid' => 'No logo image found.',
+	
+	'index:content' => '<p>Many sites use <a href="https://es.wzm.me">the additional plugins</a> for this theme to place the custom modules on this landing page.</p><p>Contact with our developers to make beautiful and modern design for your site: <a href="mailto:lab@wzm.me">lab@wzm.me</a></p>',
+];

@@ -1,0 +1,35 @@
+{
+	"name": "rivervanrain/elgg_theme",
+	"type": "elgg-plugin",
+	"description": "Responsive Elgg theme with landing page",
+    "license": "AGPL-3.0-or-later",
+	"keywords": ["theme", "landing"],
+	"homepage": "https://wzm.me",
+	"authors": [
+		{
+		  "name": "Per Jensen"
+		},
+		{
+		  "name": "Nikolai Shcherbin",
+		  "email": "support@wzm.me"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"": "classes/"
+		}
+	},
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+	"conflict": {
+		"elgg/elgg": "<6.1",
+		"elgg/custom_index": "*"
+	},
+	"support": {
+		"source": "https://github.com/rivervanrain/elgg_theme"
+	}
+}
